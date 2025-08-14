@@ -1,0 +1,11 @@
+{
+  "name": "TildeSec",
+  "short_name": "TildeSec",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#0b1020",
+  "background_color": "#0b1020",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://JakkuAzzo.github.io/tildesec/sitemap.xml

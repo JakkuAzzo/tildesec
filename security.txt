@@ -1,0 +1,5 @@
+Contact: mailto:security@tildesec.org
+Encryption: https://tildesec.org/assets/pgp.txt
+Policy: https://tildesec.org/responsible-disclosure.html
+Preferred-Languages: en
+Canonical: https://tildesec.org/security.txt

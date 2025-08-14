@@ -1,0 +1,11 @@
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+Comment: Placeholder PGP key. Replace with your real key.
+
+mQENBFmplaceholderABCDEFgQEAxQqf1Y1G8Qw0XwPpA3PjvQY0a0tQ5L4k0gP8
+u0c9q1cVb7y2HnZ+K8p1p0m6LzS1YQ5F1u+Qqk1vV6mL0g9J0K7bRZ5fY2+7g3Kz
+lGf1sZ1yQ5U1yN8mY9R2s8Y2+G1fV2b9D3s1Q0W9l2P3E1u9N0x7K2F3J4L5M6N7
+O8P9Q0R1S2T3U4V5W6X7Y8Z9aAbBcCdDeEfFgGhHiJjKkLlMmNnOoPpQrRsStTu
+...Replace with actual PGP public key...
+=abcd
+-----END PGP PUBLIC KEY BLOCK-----
