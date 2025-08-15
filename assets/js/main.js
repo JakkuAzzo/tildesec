@@ -65,14 +65,19 @@
   nums.forEach(n=> io.observe(n));
 })();
 
-// Simple carousel for Featured Projects
+// Simple carousel (supports multiple instances)
 (function(){
-  const scroller = document.querySelector('[data-carousel]');
-  if(!scroller) return;
-  let idx = 0; const items = scroller.querySelectorAll('[data-item]');
-  function go(i){ idx = (i+items.length)%items.length; items.forEach((el, n)=> el.setAttribute('data-active', n===idx)); }
-  setInterval(()=> go(idx+1), 4000);
-  go(0);
+  const scrollers = document.querySelectorAll('[data-carousel]');
+  if(!scrollers.length) return;
+  scrollers.forEach(scroller => {
+    let idx = 0; const items = scroller.querySelectorAll('[data-item]');
+    if(!items.length) return;
+    function go(i){ idx = (i+items.length)%items.length; items.forEach((el, n)=> el.toggleAttribute('data-active', n===idx)); }
+    let timer = setInterval(()=> go(idx+1), 5000);
+    scroller.addEventListener('mouseenter', ()=> { clearInterval(timer); });
+    scroller.addEventListener('mouseleave', ()=> { timer = setInterval(()=> go(idx+1), 5000); });
+    go(0);
+  });
 })();
 
 // Footer year

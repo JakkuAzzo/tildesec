@@ -142,6 +142,29 @@ img { max-width: 100%; height: auto; }
 [data-carousel] .carousel-item { display: none; }
 [data-carousel] .carousel-item[data-active] { display: block; }
 
+/* Section with logo background */
+.logo-bg {
+  position: relative;
+  background-image: radial-gradient(rgba(11,16,32,.75), rgba(11,16,32,.85)), url('../img/TildeSec.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: min(70%, 720px) auto;
+  color: #fff;
+  border-radius: 16px;
+}
+.logo-bg .card { background: rgba(255,255,255,.08); backdrop-filter: blur(4px); }
+
+/* Two-column split layout */
+.split-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 900px) {
+  .split-2 { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+.split-2 .col { display: grid; gap: 1rem; }
+
 /* Cards & grid */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
