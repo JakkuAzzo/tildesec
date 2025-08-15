@@ -81,6 +81,38 @@ img { max-width: 100%; height: auto; }
 
 /* Ensure header links are readable on black even in light theme */
 .site-header .brand { color: #fff; }
+
+/* Header brand logo crop for square PNGs */
+.site-header {
+  /* Visible logo band height and actual image render height */
+  --logo-band: 40px; /* how tall the visible slice is */
+  --logo-img: 76px;  /* how tall we render the PNG (bigger => larger text) */
+}
+
+.site-header .brand {
+  display: inline-block;            /* override generic inline-flex for clean cropping */
+  height: var(--logo-band);
+  overflow: hidden;                 /* crops top & bottom */
+  border-radius: 8px;               /* optional: rounded edges */
+  line-height: 0;                   /* remove extra inline spacing */
+}
+
+.site-header .brand img {
+  display: block;
+  height: var(--logo-img);          /* render larger than the visible band */
+  width: auto;
+  object-fit: contain;              /* keep aspect ratio */
+  transform: translateY(calc((var(--logo-band) - var(--logo-img)) / 2)); /* center crop */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+@media (min-width: 768px) {
+  .site-header { --logo-band: 44px; --logo-img: 88px; }
+}
+@media (min-width: 1200px) {
+  .site-header { --logo-band: 48px; --logo-img: 96px; }
+}
 .site-header .nav a { color: rgba(255,255,255,.7); }
 .site-header .nav a:hover, .site-header .nav a.active { color: #fff; background: rgba(255,255,255,.1); }
 
