@@ -145,7 +145,7 @@ img { max-width: 100%; height: auto; }
 /* Section with logo background */
 .logo-bg {
   position: relative;
-  background-image: radial-gradient(rgba(11,16,32,.75), rgba(11,16,32,.85)), url('../img/TildeSec.png');
+  background-image: radial-gradient(rgba(11,16,32,.75), rgba(11,16,32,.85)), url('../img/TildeSec_transparent.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: min(70%, 720px) auto;
